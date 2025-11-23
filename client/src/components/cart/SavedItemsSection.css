@@ -1,0 +1,124 @@
+/* client/src/components/cart/SavedItemsSection.css */
+
+.saved-items-section {
+  margin-top: var(--space-12);
+  padding-top: var(--space-8);
+  border-top: 2px solid var(--border-primary);
+  animation: slide-up-fade 0.5s ease-out;
+}
+
+.saved-items-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: var(--space-6);
+  color: var(--text-primary);
+}
+
+.saved-items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-4);
+}
+
+.saved-item-card {
+  padding: var(--space-4);
+  transition: all var(--transition-base);
+  animation: slide-up-fade 0.4s ease-out;
+}
+
+.saved-item-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-glow);
+}
+
+.saved-item-image-wrapper {
+  width: 100%;
+  margin-bottom: var(--space-3);
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  background: var(--bg-secondary);
+}
+
+.saved-item-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  transition: transform var(--transition-base);
+}
+
+.saved-item-card:hover .saved-item-image {
+  transform: scale(1.05);
+}
+
+.saved-item-details {
+  margin-bottom: var(--space-4);
+}
+
+.saved-item-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 var(--space-2) 0;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.saved-item-price {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--primary-400);
+  margin: 0;
+}
+
+.saved-item-actions {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.move-to-cart-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+.remove-saved-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-md);
+  color: var(--text-tertiary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.remove-saved-btn:hover {
+  background: rgba(239, 68, 68, 0.2);
+  border-color: #ef4444;
+  color: #ef4444;
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .saved-items-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--space-3);
+  }
+}
+
+@media (max-width: 480px) {
+  .saved-items-grid {
+    grid-template-columns: 1fr;
+  }
+}

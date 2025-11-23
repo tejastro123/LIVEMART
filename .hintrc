@@ -1,0 +1,37 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "compat-api/html": [
+      "default",
+      {
+        "ignore": [
+          "meta[name=theme-color]"
+        ]
+      }
+    ],
+    "apple-touch-icons": "off",
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "backdrop-filter",
+          "-webkit-overflow-scrolling",
+          "-moz-appearance"
+        ]
+      }
+    ]
+  },
+  "browserslist": [
+    "defaults",
+    "not ie 11",
+    "not chrome <= 112",
+    "not ios_saf <= 18.5",
+    "not safari <= 18.5",
+    "not samsung <= 28",
+    "not ios_saf <= 26",
+    "not safari <= 26.1",
+    "not samsung <= 29"
+  ]
+}

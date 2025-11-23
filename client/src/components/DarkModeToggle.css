@@ -1,0 +1,85 @@
+/* Dark Mode Toggle Styles */
+.dark-mode-toggle {
+  position: relative;
+  width: 60px;
+  height: 32px;
+  background: var(--gradient-primary);
+  border: none;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.dark-mode-toggle:hover {
+  box-shadow: var(--shadow-glow-primary);
+  transform: scale(1.05);
+}
+
+.dark-mode-toggle:active {
+  transform: scale(0.95);
+}
+
+.toggle-icon {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  background: var(--bg-secondary);
+  border-radius: 50%;
+  transition: all var(--transition-slow);
+  box-shadow: var(--shadow-sm);
+}
+
+.toggle-icon.light {
+  left: 3px;
+  transform: translateY(-50%) rotate(0deg);
+}
+
+.toggle-icon.dark {
+  left: calc(100% - 29px);
+  transform: translateY(-50%) rotate(360deg);
+}
+
+.sun-icon,
+.moon-icon {
+  width: 16px;
+  height: 16px;
+  color: var(--primary-600);
+}
+
+.sun-icon {
+  animation: rotate 20s linear infinite;
+}
+
+.moon-icon {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Dark mode toggle in dark theme */
+.dark .dark-mode-toggle {
+  background: var(--gradient-primary);
+}
+
+.dark .toggle-icon {
+  background: var(--bg-tertiary);
+}
+
+.dark .sun-icon,
+.dark .moon-icon {
+  color: var(--accent-400);
+}

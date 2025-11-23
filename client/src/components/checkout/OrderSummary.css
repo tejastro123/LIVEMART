@@ -1,0 +1,227 @@
+/* client/src/components/checkout/OrderSummary.css */
+
+.order-summary {
+  padding: var(--space-6);
+}
+
+.sticky-summary {
+  position: sticky;
+  top: 100px;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+}
+
+.summary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-5);
+  cursor: default;
+}
+
+.summary-header.clickable {
+  cursor: pointer;
+}
+
+.summary-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.toggle-btn {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-md);
+  padding: var(--space-2);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-btn:hover {
+  background: var(--primary-500);
+  border-color: var(--primary-500);
+  color: white;
+}
+
+.summary-content {
+  animation: slide-up-fade 0.3s ease-out;
+}
+
+/* Summary Items */
+.summary-items {
+  margin-bottom: var(--space-4);
+}
+
+.items-header {
+  margin-bottom: var(--space-3);
+}
+
+.items-count {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.items-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: var(--space-3);
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+  animation: slide-up-fade 0.3s ease-out;
+}
+
+.summary-item:hover {
+  background: var(--bg-tertiary);
+  transform: translateX(2px);
+}
+
+.item-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.item-name {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+.item-qty {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+}
+
+.item-price {
+  font-weight: 600;
+  color: var(--primary-400);
+  font-size: 0.95rem;
+}
+
+.summary-divider {
+  height: 1px;
+  background: var(--border-primary);
+  margin: var(--space-4) 0;
+}
+
+/* Price Breakdown */
+.price-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+  transition: all var(--transition-base);
+}
+
+.price-label {
+  color: var(--text-secondary);
+}
+
+.price-value {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.price-row.discount-row {
+  padding: var(--space-2);
+  background: rgba(16, 185, 129, 0.1);
+  border-radius: var(--radius-sm);
+  animation: slide-up-fade 0.3s ease-out;
+}
+
+.price-value.discount {
+  color: var(--secondary-400);
+}
+
+.price-value.shipping .free-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  background: var(--gradient-emerald);
+  color: white;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.total-row {
+  padding-top: var(--space-3);
+  font-size: 1.1rem;
+}
+
+.total-label {
+  font-weight: 700;
+  color: var(--text-primary);
+  font-size: 1.2rem;
+}
+
+.total-value {
+  font-weight: 800;
+  color: var(--primary-400);
+  font-size: 1.5rem;
+  animation: pulse-glow 2s infinite;
+}
+
+/* Savings Badge */
+.savings-badge {
+  margin-top: var(--space-4);
+  padding: var(--space-4);
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(59, 130, 246, 0.15) 100%);
+  border: 1px solid var(--secondary-500);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  color: var(--secondary-400);
+  font-weight: 600;
+  font-size: 0.95rem;
+  animation: slide-up-fade 0.4s ease-out;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .sticky-summary {
+    position: static;
+    max-height: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .order-summary {
+    padding: var(--space-4);
+  }
+
+  .summary-header {
+    cursor: pointer;
+  }
+
+  .total-value {
+    font-size: 1.3rem;
+  }
+}

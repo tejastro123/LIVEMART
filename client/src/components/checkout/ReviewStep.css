@@ -1,0 +1,338 @@
+/* client/src/components/checkout/ReviewStep.css */
+
+.review-step {
+  animation: slide-up-fade 0.4s ease-out;
+}
+
+.review-header {
+  text-align: center;
+  margin-bottom: var(--space-8);
+}
+
+.review-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.review-subtitle {
+  color: var(--text-tertiary);
+  font-size: 1rem;
+}
+
+.review-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-4);
+}
+
+.review-section-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0;
+}
+
+.edit-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-md);
+  color: var(--primary-400);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.edit-btn:hover {
+  background: var(--primary-500);
+  color: white;
+  border-color: var(--primary-500);
+}
+
+.review-content {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-2) 0;
+}
+
+.info-label {
+  font-weight: 500;
+  color: var(--text-tertiary);
+}
+
+.info-value {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.address-text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+/* Delivery Info */
+.delivery-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.delivery-method {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.method-icon-large {
+  font-size: 2.5rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient-primary);
+  border-radius: var(--radius-md);
+}
+
+.delivery-name {
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--text-primary);
+}
+
+.delivery-time {
+  font-size: 0.875rem;
+  color: var(--text-tertiary);
+}
+
+.delivery-date {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: var(--space-3);
+  background: rgba(99, 102, 241, 0.1);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--primary-500);
+}
+
+.date-label {
+  font-size: 0.875rem;
+  color: var(--text-tertiary);
+}
+
+.date-value {
+  font-weight: 600;
+  color: var(--primary-400);
+  font-size: 1.05rem;
+}
+
+/* Payment Info */
+.payment-info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+.payment-icon {
+  font-size: 2rem;
+}
+
+.payment-name {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.applied-discount {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background: rgba(16, 185, 129, 0.1);
+  border-radius: var(--radius-md);
+  color: var(--secondary-400);
+  font-size: 0.875rem;
+  margin-top: var(--space-2);
+}
+
+.discount-icon {
+  font-size: 1.2rem;
+}
+
+/* Gift Options */
+.gift-item {
+  padding: var(--space-2) 0;
+  color: var(--text-secondary);
+}
+
+.gift-message-preview {
+  margin-top: var(--space-3);
+  padding: var(--space-3);
+  background: rgba(168, 85, 247, 0.1);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--primary-500);
+}
+
+.message-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-tertiary);
+  margin-bottom: var(--space-2);
+}
+
+.message-text {
+  color: var(--text-primary);
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.notes-text {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Order Items */
+.order-items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-3);
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+}
+
+.order-item:hover {
+  background: var(--bg-tertiary);
+}
+
+.item-details {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex: 1;
+}
+
+.item-name {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.item-quantity {
+  color: var(--text-tertiary);
+  font-size: 0.875rem;
+}
+
+.item-price {
+  font-weight: 600;
+  color: var(--primary-400);
+}
+
+/* Order Summary */
+.summary-breakdown {
+  margin-top: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.summary-row.discount {
+  color: var(--secondary-400);
+}
+
+.summary-divider {
+  height: 1px;
+  background: var(--border-primary);
+  margin: var(--space-2) 0;
+}
+
+.summary-row.total {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  padding-top: var(--space-2);
+}
+
+.summary-row.total span:last-child {
+  color: var(--primary-400);
+}
+
+/* Actions */
+.review-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.place-order-btn {
+  min-width: 300px;
+  font-size: 1.1rem;
+  padding: var(--space-4) var(--space-8);
+}
+
+.terms-text {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  text-align: center;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .review-section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+
+  .delivery-method {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .place-order-btn {
+    min-width: 100%;
+  }
+
+  .item-details {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
